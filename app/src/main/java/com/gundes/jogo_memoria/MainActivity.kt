@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
@@ -31,9 +32,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.gundes.jogo_memoria.ui.theme.JogomemoriaTheme
 import com.gundes.jogo_memoria.utils.numeroParaImagem
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
@@ -57,6 +61,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Jogo(modifier: Modifier = Modifier){
+
+    var tentativas by remember { mutableStateOf(0) }
 
     var a1 by remember { mutableStateOf(R.drawable.fundo) }
     var a2 by remember { mutableStateOf(R.drawable.fundo) }
@@ -112,6 +118,11 @@ fun Jogo(modifier: Modifier = Modifier){
 
     // 3x4
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally){
+            Text(text = "Modo Hardcore", color = Color(0xff0d47a1), fontWeight = FontWeight(800), fontSize = 30.sp)
+            Text(text = "Tentativas: $tentativas")
+        }
+        Spacer(modifier = Modifier.height(20.dp))
         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 onClick = {
@@ -122,6 +133,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, a1Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -144,6 +156,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, a2Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -166,6 +179,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, a3Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -180,7 +194,7 @@ fun Jogo(modifier: Modifier = Modifier){
                 )
             }
         }
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 onClick = {
@@ -191,6 +205,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, b1Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -213,6 +228,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, b2Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -235,6 +251,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, b3Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -249,7 +266,7 @@ fun Jogo(modifier: Modifier = Modifier){
                 )
             }
         }
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 onClick = {
@@ -260,6 +277,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, c1Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -282,6 +300,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, c2Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -304,6 +323,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, c3Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -318,7 +338,7 @@ fun Jogo(modifier: Modifier = Modifier){
                 )
             }
         }
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(20.dp))
         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically){
             Button(
                 onClick = {
@@ -329,6 +349,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, d1Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -351,6 +372,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, d2Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -373,6 +395,7 @@ fun Jogo(modifier: Modifier = Modifier){
                         if (verificador(escolhas, d3Imagem) == R.drawable.fundo) {
                             delay(1000)
                             voltarTudoAoFundo()
+                            tentativas++
                             escolhas.clear()
                         }
                     }
@@ -388,7 +411,10 @@ fun Jogo(modifier: Modifier = Modifier){
                 )
             }
         }
-        Button(onClick = {
+        Spacer(modifier = Modifier.height(20.dp))
+        Button(modifier = Modifier.width(105.dp).height(50.dp), onClick = {
+            voltarTudoAoFundo()
+            tentativas = 0
             numerosRandoms = randomizer(arrayOf(a1,a2,a3,b1,b2,b3,c1,c2,c3,d1,d2,d3))
 
             a1 = numerosRandoms[0]
@@ -407,7 +433,7 @@ fun Jogo(modifier: Modifier = Modifier){
             d2 = numerosRandoms[10]
             d3 = numerosRandoms[11]
         }) {
-            Text(text = "Play")
+            Text(text = "Play", fontSize = 20.sp)
         }
     }
 }
