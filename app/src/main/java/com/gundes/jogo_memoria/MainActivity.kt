@@ -131,7 +131,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, a1Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -154,7 +154,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, a2Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -177,7 +177,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, a3Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -203,7 +203,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, b1Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -226,7 +226,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, b2Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -249,7 +249,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, b3Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -275,7 +275,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, c1Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -298,7 +298,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, c2Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -321,7 +321,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, c3Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -347,7 +347,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, d1Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -370,7 +370,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, d2Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
@@ -393,7 +393,7 @@ fun Jogo(modifier: Modifier = Modifier){
 
                     scope.launch {
                         if (verificador(escolhas, d3Imagem) == R.drawable.fundo) {
-                            delay(1000)
+                            delay(500)
                             voltarTudoAoFundo()
                             tentativas++
                             escolhas.clear()
