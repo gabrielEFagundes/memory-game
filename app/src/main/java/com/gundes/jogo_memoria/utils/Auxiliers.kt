@@ -41,6 +41,7 @@ fun numeroParaImagem(num: Int): Int{
 
 fun verificador(escolhas: MutableList<Int>, cardAtual: Int): Int{
     if(escolhas.size < 2){
+        println(escolhas.size)
         return cardAtual
     }
 
@@ -48,6 +49,7 @@ fun verificador(escolhas: MutableList<Int>, cardAtual: Int): Int{
         return R.drawable.fundo
 
     }else{
+        escolhas.clear()
         return cardAtual
 
     }
